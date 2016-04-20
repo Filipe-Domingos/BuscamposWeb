@@ -40,7 +40,6 @@ gem 'ransack', '~> 1.5.1'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'faker'
@@ -68,6 +67,7 @@ group :production do
 end
 
 group :development do
+  gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'html2haml'
   gem 'quiet_assets'
