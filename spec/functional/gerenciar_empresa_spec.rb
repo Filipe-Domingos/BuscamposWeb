@@ -16,7 +16,6 @@ feature 'Gerenciar Empresa' do
    scenario 'Excluir empresa' do 
     empresa = FactoryGirl.create(:empresa)
     visit empresas_path
-    #click_link("Excluir", :match => :first)
     click_link("Excluir")
 
   end

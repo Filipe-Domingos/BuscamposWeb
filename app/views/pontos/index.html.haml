@@ -1,0 +1,27 @@
+%h1 Listing pontos
+
+%table
+  %thead
+    %tr
+      %th Rua
+      %th Bairro
+      %th Latitude
+      %th Longitude
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pontos.each do |ponto|
+      %tr
+        %td= ponto.rua
+        %td= ponto.bairro
+        %td= ponto.latitude
+        %td= ponto.longitude
+        %td= link_to 'Show', ponto
+        %td= link_to 'Edit', edit_ponto_path(ponto)
+        %td= link_to 'Excluir', ponto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ponto', new_ponto_path

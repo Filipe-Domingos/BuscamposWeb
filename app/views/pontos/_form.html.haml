@@ -1,0 +1,11 @@
+= simple_form_for(@ponto) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :rua
+    = f.input :bairro
+    = f.input :latitude
+    = f.input :longitude
+
+  .form-actions
+    = f.submit "Save"
