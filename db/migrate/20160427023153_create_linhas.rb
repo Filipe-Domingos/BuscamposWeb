@@ -1,0 +1,10 @@
+class CreateLinhas < ActiveRecord::Migration
+  def change
+    create_table :linhas do |t|
+      t.string :nome
+      t.references :ponto, index: true, foreign_key: true
+
+      t.timestamps null: false
+    end
+  end
+end

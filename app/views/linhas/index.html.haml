@@ -1,0 +1,23 @@
+%h1 Listing linhas
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Ponto
+      %th
+      %th
+      %th
+
+  %tbody
+    - @linhas.each do |linha|
+      %tr
+        %td= linha.nome
+        %td= linha.ponto.rua
+        %td= link_to 'Show', linha
+        %td= link_to 'Edit', edit_linha_path(linha)
+        %td= link_to 'Excluir', linha, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Linha', new_linha_path

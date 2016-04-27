@@ -1,0 +1,9 @@
+= simple_form_for(@linha) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome, label: "Nome"
+    = f.association :ponto, label_method: :rua
+
+  .form-actions
+    = f.submit "Save"

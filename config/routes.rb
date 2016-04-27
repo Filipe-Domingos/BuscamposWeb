@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :linhas
   resources :onibus
   resources :pontos
   resources :empresas

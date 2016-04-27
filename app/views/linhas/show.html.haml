@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @linha.nome
+%p
+  %b Ponto:
+  = @linha.ponto.rua
+
+= link_to 'Edit', edit_linha_path(@linha)
+\|
+= link_to 'Back', linhas_path
