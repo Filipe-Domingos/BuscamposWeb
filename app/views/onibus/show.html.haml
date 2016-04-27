@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Placa:
+  = @onibu.placa
+%p
+  %b Empresa:
+  = @onibu.empresa.nomeEmpresa
+%p
+  %b Num assento:
+  = @onibu.num_assento
+%p
+  %b Assento especial:
+  = @onibu.assento_especial
+
+= link_to 'Edit', edit_onibu_path(@onibu)
+\|
+= link_to 'Back', onibus_path

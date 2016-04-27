@@ -1,0 +1,11 @@
+= simple_form_for(@onibu) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :placa
+    = f.association :empresa, label_method: :nomeEmpresa
+    = f.input :num_assento, label: "Numero Assento"
+    = f.input :assento_especial, label: "Assento Especial"
+
+  .form-actions
+    = f.submit "Save"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :onibus
   resources :pontos
   resources :empresas
   root to: 'visitors#index'
