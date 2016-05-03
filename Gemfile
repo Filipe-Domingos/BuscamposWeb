@@ -10,11 +10,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'jquery-inputmask-rails'
-
 gem 'turbolinks'
 gem 'jbuilder'
-
-
 #gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'haml-rails'
@@ -22,11 +19,6 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'therubyracer', platform: :ruby
 gem 'thin'
-
-group :doc do
-  gem 'sdoc', require: false
-end
-
 gem 'rb-readline'
 gem 'responders', '~> 2.0'
 gem 'exception_notification', '~> 4.0.1'
@@ -37,6 +29,10 @@ gem 'active_type', '~> 0.3.1'
 gem 'date_helper'
 gem 'money', '~> 6.5.0'
 gem 'ransack', '~> 1.5.1'
+
+group :doc do
+  gem 'sdoc', require: false
+end
 
 group :development, :test do
   gem 'byebug'
@@ -67,7 +63,6 @@ group :production do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'html2haml'
   gem 'quiet_assets'
@@ -76,4 +71,5 @@ group :development do
   gem "rails_apps_testing"
   gem 'brakeman'
   gem 'spring'
+  gem 'web-console', '~> 2.0'
 end

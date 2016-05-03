@@ -1,1 +1,1 @@
-json.extract! @empresa, :id, :nomeEmpresa, :cnpj, :telefone, :endereco, :created_at, :updated_at
+json.extract! @empresa, :id, :nome, :cnpj, :telefone, :endereco, :created_at, :updated_at

@@ -11,16 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427023153) do
+ActiveRecord::Schema.define(version: 20160502202436) do
 
   create_table "empresas", force: :cascade do |t|
-    t.string   "nomeEmpresa"
+    t.string   "nome"
     t.string   "cnpj"
     t.string   "telefone"
     t.string   "endereco"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  create_table "horarios", force: :cascade do |t|
+    t.integer  "onibu_id"
+    t.integer  "linha_id"
+    t.string   "hora"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "horarios", ["linha_id"], name: "index_horarios_on_linha_id"
+  add_index "horarios", ["onibu_id"], name: "index_horarios_on_onibu_id"
 
   create_table "linhas", force: :cascade do |t|
     t.string   "nome"
@@ -32,8 +43,8 @@ ActiveRecord::Schema.define(version: 20160427023153) do
   add_index "linhas", ["ponto_id"], name: "index_linhas_on_ponto_id"
 
   create_table "onibus", force: :cascade do |t|
-    t.string   "placa"
     t.integer  "empresa_id"
+    t.string   "placa"
     t.integer  "num_assento"
     t.boolean  "assento_especial"
     t.datetime "created_at",       null: false

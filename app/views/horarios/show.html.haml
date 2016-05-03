@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Onibu:
+  = @horario.onibu.placa
+%p
+  %b Linha:
+  = @horario.linha.nome
+%p
+  %b Hora:
+  = @horario.hora
+
+= link_to 'Edit', edit_horario_path(@horario)
+\|
+= link_to 'Back', horarios_path

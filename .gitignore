@@ -22,7 +22,6 @@
 /tmp/*
 
 # various artifacts
-
 *.rbc
 *.sassc
 .redcar/

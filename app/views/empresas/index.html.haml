@@ -3,10 +3,10 @@
 %table
   %thead
     %tr
-      %th Nomeempresa
-      %th Cnpj
+      %th Nome
+      %th CNPJ
       %th Telefone
-      %th Endereco
+      %th Endereço
       %th
       %th
       %th
@@ -14,13 +14,13 @@
   %tbody
     - @empresas.each do |empresa|
       %tr
-        %td= empresa.nomeEmpresa
+        %td= empresa.nome
         %td= empresa.cnpj
         %td= empresa.telefone
         %td= empresa.endereco
         %td= link_to 'Show', empresa
         %td= link_to 'Edit', edit_empresa_path(empresa)
-        %td= link_to 'Excluir', empresa, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', empresa, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

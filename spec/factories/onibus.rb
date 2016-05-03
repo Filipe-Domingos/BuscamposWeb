@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :onibu do
-    placa "MyString"
     empresa nil
+    placa "MyString"
     num_assento 1
     assento_especial false
   end

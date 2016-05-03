@@ -1,0 +1,10 @@
+= simple_form_for(@horario) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :onibu, label: "Placa Ônibus", label_method: :placa
+    = f.association :linha, label: "Nome Linha", label_method: :nome
+    = f.input :hora
+
+  .form-actions
+    = f.submit "Salvar"

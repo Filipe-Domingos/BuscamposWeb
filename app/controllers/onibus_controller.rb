@@ -69,6 +69,6 @@ class OnibusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def onibu_params
-      params.require(:onibu).permit(:placa, :empresa_id, :num_assento, :assento_especial)
+      params.require(:onibu).permit(:empresa_id, :placa, :num_assento, :assento_especial)
     end
 end

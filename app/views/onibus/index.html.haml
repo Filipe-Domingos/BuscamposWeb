@@ -3,10 +3,10 @@
 %table
   %thead
     %tr
-      %th Placa
-      %th Empresa
-      %th Num assento
-      %th Assento especial
+      %th Nome Empresa
+      %th Placa Ônibus
+      %th Número Assento
+      %th Assento Especial
       %th
       %th
       %th
@@ -14,13 +14,13 @@
   %tbody
     - @onibus.each do |onibu|
       %tr
+        %td= onibu.empresa.nome
         %td= onibu.placa
-        %td= onibu.empresa.nomeEmpresa
         %td= onibu.num_assento
         %td= onibu.assento_especial
         %td= link_to 'Show', onibu
         %td= link_to 'Edit', edit_onibu_path(onibu)
-        %td= link_to 'Excluir', onibu, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', onibu, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

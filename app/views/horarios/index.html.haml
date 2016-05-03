@@ -1,0 +1,25 @@
+%h1 Listing horarios
+
+%table
+  %thead
+    %tr
+      %th Placa Ônibus
+      %th Nome Linha
+      %th Hora
+      %th
+      %th
+      %th
+
+  %tbody
+    - @horarios.each do |horario|
+      %tr
+        %td= horario.onibu.placa
+        %td= horario.linha.nome
+        %td= horario.hora
+        %td= link_to 'Show', horario
+        %td= link_to 'Edit', edit_horario_path(horario)
+        %td= link_to 'Destroy', horario, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Horario', new_horario_path

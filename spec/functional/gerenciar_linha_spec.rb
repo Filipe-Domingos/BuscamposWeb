@@ -14,7 +14,7 @@ feature 'Gerenciar Linha' do
   scenario 'Incluir Linha' do #, :js => true  do
     visit new_linha_path
     preencher(dados)
-    click_button 'Save'
+    click_button 'Salvar'
     verificar(dados)
   end
 
@@ -22,19 +22,19 @@ feature 'Gerenciar Linha' do
     linha = FactoryGirl.create(:linha, ponto: @ponto)
     visit edit_linha_path(linha)
     preencher(dados)
-    click_button 'Save'
+    click_button 'Salvar'
     verificar(dados)
   end
 
   scenario 'Excluir Linha' do #, :js => true  do
     linha = FactoryGirl.create(:linha, ponto: @ponto)
     visit linhas_path
-    click_link 'Excluir'
+    click_link 'Destroy'
   end
 
   def preencher(dados)
-    fill_in 'Nome',  with: dados[:nome]
-    select dados[:rua], from: "Ponto"
+    fill_in 'Nome Linha',  with: dados[:nome]
+    select dados[:rua], from: "Nome Rua"
   end
  
   def verificar(dados)

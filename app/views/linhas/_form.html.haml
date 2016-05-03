@@ -2,8 +2,9 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :nome, label: "Nome"
-    = f.association :ponto, label_method: :rua
+    = f.input :nome, label: "Nome Linha"
+    = f.association :ponto, label: "Nome Rua", label_method: :rua
 
   .form-actions
-    = f.submit "Save"
+    = f.submit "Salvar"
+ 

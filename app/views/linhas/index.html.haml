@@ -3,8 +3,8 @@
 %table
   %thead
     %tr
-      %th Nome
-      %th Ponto
+      %th Nome Linha
+      %th Nome Rua
       %th
       %th
       %th
@@ -16,7 +16,7 @@
         %td= linha.ponto.rua
         %td= link_to 'Show', linha
         %td= link_to 'Edit', edit_linha_path(linha)
-        %td= link_to 'Excluir', linha, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', linha, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

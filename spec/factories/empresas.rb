@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :empresa do
-    nomeEmpresa "MyString"
+    nome "MyString"
     cnpj "MyString"
     telefone "MyString"
     endereco "MyString"

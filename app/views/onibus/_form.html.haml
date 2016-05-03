@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
+    = f.association :empresa, label: "Nome Empresa", label_method: :nome
     = f.input :placa
-    = f.association :empresa, label_method: :nomeEmpresa
-    = f.input :num_assento, label: "Numero Assento"
+    = f.input :num_assento, label: "Número Assentos"
     = f.input :assento_especial, label: "Assento Especial"
 
   .form-actions
-    = f.submit "Save"
+    = f.submit "Salvar"

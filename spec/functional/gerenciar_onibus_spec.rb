@@ -2,12 +2,12 @@
 feature 'Gerenciar Onibus' do
 
   before(:each) do
-    @empresa = create(:empresa, nomeEmpresa: "CTC")
+    @empresa = create(:empresa, nome: "Empresa Brasil Transporte")
   end
 
   let(:dados) do {
+    nome: "Empresa Brasil Transporte",
     placa: "LNI-2345",
-    nomeEmpresa: "CTC",
     num_assento: 34,
     assento_especial: "true"
    }
@@ -16,7 +16,7 @@ feature 'Gerenciar Onibus' do
   scenario 'Incluir Onibus' do #, :js => true  do
     visit new_onibu_path
     preencher(dados)
-    click_button 'Save'
+    click_button 'Salvar'
     verificar(dados)
   end
 
@@ -24,26 +24,26 @@ feature 'Gerenciar Onibus' do
     onibu = FactoryGirl.create(:onibu, empresa: @empresa)
     visit edit_onibu_path(onibu)
     preencher(dados)
-    click_button 'Save'
+    click_button 'Salvar'
     verificar(dados)
   end
 
   scenario 'Excluir Onibus' do #, :js => true  do
     onibu = FactoryGirl.create(:onibu, empresa: @empresa)
     visit onibus_path
-    click_link 'Excluir'
+    click_link 'Destroy'
   end
 
   def preencher(dados)
+    select dados[:nome], from: "Empresa"
     fill_in 'Placa',  with: dados[:placa]
-    select dados[:nomeEmpresa], from: "Empresa"
-    fill_in 'Numero Assento',  with: dados[:num_assento]
+    fill_in 'Número Assento',  with: dados[:num_assento]
     page.check 'Assento Especial'
   end
  
   def verificar(dados)
+    page.should have_content "Empresa: #{dados[:nome]}"
     page.should have_content "Placa: #{dados[:placa]}"
-    page.should have_content "Empresa: #{dados[:nomeEmpresa]}"
     page.should have_content "Num assento: #{dados[:num_assento]}"
     page.should have_content "Assento especial: #{dados[:assento_especial]}"
   end

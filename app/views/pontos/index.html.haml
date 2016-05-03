@@ -3,8 +3,8 @@
 %table
   %thead
     %tr
-      %th Rua
-      %th Bairro
+      %th Nome Rua
+      %th Nome Bairro
       %th Latitude
       %th Longitude
       %th
@@ -20,7 +20,7 @@
         %td= ponto.longitude
         %td= link_to 'Show', ponto
         %td= link_to 'Edit', edit_ponto_path(ponto)
-        %td= link_to 'Excluir', ponto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', ponto, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
