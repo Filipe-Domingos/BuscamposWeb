@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 ruby '2.2.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -11,6 +12,7 @@ gem 'jquery-turbolinks'
 gem 'jquery-inputmask-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+
 #gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'haml-rails'

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   resources :horarios
-  resources :horarios
-  resources :horarios
-  resources :horarios
-  resources :horarios
   resources :linhas
   resources :onibus
   resources :pontos
