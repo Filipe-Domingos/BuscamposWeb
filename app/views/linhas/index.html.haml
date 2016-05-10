@@ -13,7 +13,7 @@
   %tbody
     - @linhas.each do |linha|
       %tr
-        %td= linha.idz
+        %td= linha.id
         %td= linha.nome
         %td= linha.ponto.rua
         %td= link_to 'Show', linha
