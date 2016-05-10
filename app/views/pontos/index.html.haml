@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Id
       %th Nome Rua
       %th Nome Bairro
       %th Latitude
@@ -14,6 +15,7 @@
   %tbody
     - @pontos.each do |ponto|
       %tr
+        %td= ponto.id
         %td= ponto.rua
         %td= ponto.bairro
         %td= ponto.latitude

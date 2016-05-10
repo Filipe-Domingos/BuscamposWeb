@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Id
       %th Placa Ônibus
       %th Nome Linha
       %th Hora
@@ -13,6 +14,7 @@
   %tbody
     - @horarios.each do |horario|
       %tr
+        %td= horario.id
         %td= horario.onibu.placa
         %td= horario.linha.nome
         %td= horario.hora

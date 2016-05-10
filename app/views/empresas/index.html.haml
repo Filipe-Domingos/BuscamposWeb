@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Id
       %th Nome
       %th CNPJ
       %th Telefone
@@ -14,6 +15,7 @@
   %tbody
     - @empresas.each do |empresa|
       %tr
+        %td= empresa.id
         %td= empresa.nome
         %td= empresa.cnpj
         %td= empresa.telefone

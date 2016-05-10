@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Id
       %th Nome Linha
       %th Nome Rua
       %th
@@ -12,6 +13,7 @@
   %tbody
     - @linhas.each do |linha|
       %tr
+        %td= linha.idz
         %td= linha.nome
         %td= linha.ponto.rua
         %td= link_to 'Show', linha

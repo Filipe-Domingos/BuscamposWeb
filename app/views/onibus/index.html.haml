@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Id
       %th Nome Empresa
       %th Placa Ônibus
       %th Número Assento
@@ -14,6 +15,7 @@
   %tbody
     - @onibus.each do |onibu|
       %tr
+        %td= onibu.id
         %td= onibu.empresa.nome
         %td= onibu.placa
         %td= onibu.num_assento
